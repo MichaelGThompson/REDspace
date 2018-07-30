@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8024C2DA210BC17600B20C6A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8024C2D8210BC17500B20C6A /* AVKit.framework */; };
+		8024C2DB210BC17600B20C6A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8024C2D9210BC17600B20C6A /* AVFoundation.framework */; };
+		8024C2DD210CB69000B20C6A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024C2DC210CB69000B20C6A /* PlayerView.swift */; };
+		8024C2DF210CB6A800B20C6A /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8024C2DE210CB6A800B20C6A /* PlayerView.xib */; };
+		8024C2E1210CB86600B20C6A /* HorizontalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024C2E0210CB86600B20C6A /* HorizontalScrollViewController.swift */; };
+		8024F625210B85FA007C2031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8024F624210B85FA007C2031 /* AppDelegate.swift */; };
+		8024F62A210B85FA007C2031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024F628210B85FA007C2031 /* Main.storyboard */; };
+		8024F62C210B85FD007C2031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8024F62B210B85FD007C2031 /* Assets.xcassets */; };
+		8024F62F210B85FD007C2031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024F62D210B85FD007C2031 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8024C2D8210BC17500B20C6A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		8024C2D9210BC17600B20C6A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8024C2DC210CB69000B20C6A /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		8024C2DE210CB6A800B20C6A /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		8024C2E0210CB86600B20C6A /* HorizontalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollViewController.swift; sourceTree = "<group>"; };
+		8024F621210B85FA007C2031 /* REDspace Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "REDspace Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8024F624210B85FA007C2031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8024F629210B85FA007C2031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8024F62B210B85FD007C2031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8024F62E210B85FD007C2031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8024F630210B85FD007C2031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8024F61E210B85FA007C2031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8024C2DA210BC17600B20C6A /* AVKit.framework in Frameworks */,
+				8024C2DB210BC17600B20C6A /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8024C2D7210BC17500B20C6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8024C2D9210BC17600B20C6A /* AVFoundation.framework */,
+				8024C2D8210BC17500B20C6A /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8024F618210B85FA007C2031 = {
+			isa = PBXGroup;
+			children = (
+				8024F623210B85FA007C2031 /* REDspace Challenge */,
+				8024F622210B85FA007C2031 /* Products */,
+				8024C2D7210BC17500B20C6A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8024F622210B85FA007C2031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8024F621210B85FA007C2031 /* REDspace Challenge.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8024F623210B85FA007C2031 /* REDspace Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				8024F624210B85FA007C2031 /* AppDelegate.swift */,
+				8024F628210B85FA007C2031 /* Main.storyboard */,
+				8024F62B210B85FD007C2031 /* Assets.xcassets */,
+				8024F62D210B85FD007C2031 /* LaunchScreen.storyboard */,
+				8024F630210B85FD007C2031 /* Info.plist */,
+				8024C2DC210CB69000B20C6A /* PlayerView.swift */,
+				8024C2DE210CB6A800B20C6A /* PlayerView.xib */,
+				8024C2E0210CB86600B20C6A /* HorizontalScrollViewController.swift */,
+			);
+			path = "REDspace Challenge";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8024F620210B85FA007C2031 /* REDspace Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8024F633210B85FD007C2031 /* Build configuration list for PBXNativeTarget "REDspace Challenge" */;
+			buildPhases = (
+				8024F61D210B85FA007C2031 /* Sources */,
+				8024F61E210B85FA007C2031 /* Frameworks */,
+				8024F61F210B85FA007C2031 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "REDspace Challenge";
+			productName = "REDspace Challenge";
+			productReference = 8024F621210B85FA007C2031 /* REDspace Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8024F619210B85FA007C2031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Michael Thompson";
+				TargetAttributes = {
+					8024F620210B85FA007C2031 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8024F61C210B85FA007C2031 /* Build configuration list for PBXProject "REDspace Challenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8024F618210B85FA007C2031;
+			productRefGroup = 8024F622210B85FA007C2031 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8024F620210B85FA007C2031 /* REDspace Challenge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8024F61F210B85FA007C2031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8024F62F210B85FD007C2031 /* LaunchScreen.storyboard in Resources */,
+				8024F62C210B85FD007C2031 /* Assets.xcassets in Resources */,
+				8024F62A210B85FA007C2031 /* Main.storyboard in Resources */,
+				8024C2DF210CB6A800B20C6A /* PlayerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8024F61D210B85FA007C2031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8024C2DD210CB69000B20C6A /* PlayerView.swift in Sources */,
+				8024F625210B85FA007C2031 /* AppDelegate.swift in Sources */,
+				8024C2E1210CB86600B20C6A /* HorizontalScrollViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8024F628210B85FA007C2031 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8024F629210B85FA007C2031 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8024F62D210B85FD007C2031 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8024F62E210B85FD007C2031 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8024F631210B85FD007C2031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8024F632210B85FD007C2031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8024F634210B85FD007C2031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FRSK5A257;
+				INFOPLIST_FILE = "REDspace Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mgt.REDspace-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8024F635210B85FD007C2031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FRSK5A257;
+				INFOPLIST_FILE = "REDspace Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mgt.REDspace-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8024F61C210B85FA007C2031 /* Build configuration list for PBXProject "REDspace Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8024F631210B85FD007C2031 /* Debug */,
+				8024F632210B85FD007C2031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8024F633210B85FD007C2031 /* Build configuration list for PBXNativeTarget "REDspace Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8024F634210B85FD007C2031 /* Debug */,
+				8024F635210B85FD007C2031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8024F619210B85FA007C2031 /* Project object */;
+}
