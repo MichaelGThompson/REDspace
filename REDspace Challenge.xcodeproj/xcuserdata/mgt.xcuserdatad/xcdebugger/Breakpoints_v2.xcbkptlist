@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REDspace Challenge/HorizontalScrollViewController.swift"
-            timestampString = "554666249.205726"
+            timestampString = "554840948.667003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "HorizontalScrollViewController"
             landmarkType = "21">
          </BreakpointContent>
@@ -41,14 +41,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "REDspace Challenge/PlayerView.swift"
-            timestampString = "554666249.205882"
+            filePath = "REDspace Challenge/ViewControllers/HorizontalScrollViewController.swift"
+            timestampString = "554848567.647058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "setUpPlayer(url:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "preLoadAssets()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "REDspace_Challenge.HorizontalScrollViewController.preLoadAssets() -&gt; ()"
+                  moduleName = "REDspace Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgt/Desktop/REDspace%20Challenge/REDspace%20Challenge/ViewControllers/HorizontalScrollViewController.swift"
+                  timestampString = "554848491.653124"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__ObjC.AVAsset&gt;) -&gt; () in REDspace_Challenge.HorizontalScrollViewController.preLoadAssets() -&gt; ()"
+                  moduleName = "REDspace Challenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mgt/Desktop/REDspace%20Challenge/REDspace%20Challenge/ViewControllers/HorizontalScrollViewController.swift"
+                  timestampString = "554848491.6556931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "22">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +89,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "REDspace Challenge/PlayerView.swift"
-            timestampString = "554666249.206399"
+            filePath = "REDspace Challenge/ViewControllers/HorizontalScrollViewController.swift"
+            timestampString = "554848567.647471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "playFromStart()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "preLoadAssets()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
