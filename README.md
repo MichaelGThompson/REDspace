@@ -1,6 +1,6 @@
 # REDspace
 
-This is a test project that allows a user to horizontally scroll through three screens that automatically play 
+This is a test project that allows a user to horizontally scroll through three views that automatically play 
 HLS (using AVKit). 
 
 A VideoPlayer encapsulates the playerLayer and the AVPlayer for use in the view controller. The assets are preloaded/fetched 
