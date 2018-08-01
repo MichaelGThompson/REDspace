@@ -26,9 +26,10 @@ class VideoLoader {
             
             let asset = AVAsset(url: url)
             let playableKey = "playable"
+            let metaKey = "availableMetadataFormats"
             
             dispatchGroup.enter()
-            asset.loadValuesAsynchronously(forKeys: [playableKey]) {
+            asset.loadValuesAsynchronously(forKeys: [playableKey, metaKey]) {
                 var error: NSError? = nil
                 let status = asset.statusOfValue(forKey: playableKey, error: &error)
                 switch status {

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REDspace Challenge/ViewControllers/HorizontalScrollViewController.swift"
-            timestampString = "554848567.647058"
+            timestampString = "554852263.597306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "preLoadAssets()"
             landmarkType = "7">
             <Locations>
@@ -90,11 +90,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REDspace Challenge/ViewControllers/HorizontalScrollViewController.swift"
-            timestampString = "554848567.647471"
+            timestampString = "554852263.597379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "preLoadAssets()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "REDspace Challenge/ViewControllers/HorizontalScrollViewController.swift"
+            timestampString = "554852263.5974391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "preLoadAssets()"
             landmarkType = "7">
          </BreakpointContent>

@@ -20,9 +20,10 @@ class VideoPlayer: NSObject {
         self.playerView = playerView
         self.asset = asset
         super.init()
+        
         setUpPlayer()
     }
-    
+
     func setUpPlayer() {
         playerItem = AVPlayerItem(asset: self.asset)
         playerItem?.preferredForwardBufferDuration = 5
@@ -31,16 +32,16 @@ class VideoPlayer: NSObject {
         playerLayer = AVPlayerLayer(player: self.player)
         
         player?.addObserver(self,
-                            forKeyPath: #keyPath(AVPlayer.timeControlStatus),
-                            options: [.old, .new],
-                            context: &self.playerItemContext)
+            forKeyPath: #keyPath(AVPlayer.timeControlStatus),
+            options: [.old, .new],
+            context: &self.playerItemContext)
         
         playerItem?.addObserver(self,
-                                forKeyPath: #keyPath(AVPlayerItem.status),
-                                options: [.old, .new],
-                                context: &self.playerItemContext)
+            forKeyPath: #keyPath(AVPlayerItem.status),
+            options: [.old, .new],
+            context: &self.playerItemContext)
         
-        playerLayer?.videoGravity = .resizeAspect // def
+        playerLayer?.videoGravity = .resizeAspect // default
         player?.automaticallyWaitsToMinimizeStalling = false
         playerItem?.preferredForwardBufferDuration = 0
     }
@@ -57,12 +58,13 @@ class VideoPlayer: NSObject {
     }
     
     func pause() {
-        DispatchQueue.main.async {
+        //DispatchQueue.main.async {
             self.player?.pause()
-        }
+        //}
     }
     
-    // observer callback
+    
+    // MARK: - Observer callback
     override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,

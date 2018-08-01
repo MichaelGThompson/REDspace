@@ -12,15 +12,17 @@ import AVKit
 class HorizontalScrollViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     let videoLoader: VideoLoader = VideoLoader()
     var assets: [AVAsset] = []
     var players: [VideoPlayer] = []
-    var currentViewIndex = 0
+    var currentPlayerIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activityIndicator.startAnimating()
         preLoadAssets()
     }
 
@@ -28,14 +30,16 @@ class HorizontalScrollViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - setup methods
     
     func preLoadAssets() {
         videoLoader.preLoadAssets { (data) in
+            self.activityIndicator.stopAnimating()
             if data.count > 0 {
                 self.assets = data
                 self.createPlayers()
-                self.configureScrollView(players: self.players)
-                
+                self.configureScrollView()
+            
                 // play first asset in first player view
                 guard let firstPlayer = self.players.first else {return }
                 if let playerLayer = firstPlayer.playerLayer {
@@ -56,7 +60,7 @@ class HorizontalScrollViewController: UIViewController {
         return
     }
 
-    func configureScrollView(players: [VideoPlayer]) {
+    func configureScrollView() {
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
@@ -70,20 +74,22 @@ class HorizontalScrollViewController: UIViewController {
 
 }
 
+
+// MARK: - Scrollview delegate
+
 extension HorizontalScrollViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
       
         let pageIndex = Int(round(scrollView.contentOffset.x / view.frame.width))
-        if pageIndex != currentViewIndex {
-            players[currentViewIndex].pause()
-            if let currentPlayerLayer = players[currentViewIndex].playerLayer, let pageIndexPlayerLayer = players[pageIndex].playerLayer {
+        if pageIndex != currentPlayerIndex {
+            players[currentPlayerIndex].pause()
+            if let currentPlayerLayer = players[currentPlayerIndex].playerLayer, let pageIndexPlayerLayer = players[pageIndex].playerLayer {
                 view.layer.replaceSublayer(currentPlayerLayer, with: pageIndexPlayerLayer)
                 pageIndexPlayerLayer.frame = view.frame
-                //playerViews[pageIndex].playFromStart()
                 players[pageIndex].play()
             }
-            currentViewIndex = pageIndex
+            currentPlayerIndex = pageIndex
         }
     }
 }
