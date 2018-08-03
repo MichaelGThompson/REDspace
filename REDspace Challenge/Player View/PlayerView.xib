@@ -15,8 +15,25 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlayerView" customModule="REDspace_Challenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-qh-Qts">
+                    <rect key="frame" x="68" y="41" width="239" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jaS-qh-Qts" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="68" id="QSg-hW-9hI"/>
+                <constraint firstItem="jaS-qh-Qts" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="21" id="YPR-9W-tHh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jaS-qh-Qts" secondAttribute="trailing" constant="68" id="yyG-Ie-4A8"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="titleLabel" destination="jaS-qh-Qts" id="Ofg-R3-o4B"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>
