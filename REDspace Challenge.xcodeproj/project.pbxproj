@@ -16,6 +16,8 @@
 		8024F62A210B85FA007C2031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024F628210B85FA007C2031 /* Main.storyboard */; };
 		8024F62C210B85FD007C2031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8024F62B210B85FD007C2031 /* Assets.xcassets */; };
 		8024F62F210B85FD007C2031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8024F62D210B85FD007C2031 /* LaunchScreen.storyboard */; };
+		80768AA621124B8D00587383 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80768AA521124B8D00587383 /* VideoPlayer.swift */; };
+		80768AAB21124C8200587383 /* VideoLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80768AAA21124C8200587383 /* VideoLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8024F62B210B85FD007C2031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8024F62E210B85FD007C2031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8024F630210B85FD007C2031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80768AA521124B8D00587383 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		80768AAA21124C8200587383 /* VideoLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,16 +78,42 @@
 		8024F623210B85FA007C2031 /* REDspace Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				8024F630210B85FD007C2031 /* Info.plist */,
 				8024F624210B85FA007C2031 /* AppDelegate.swift */,
 				8024F628210B85FA007C2031 /* Main.storyboard */,
+				80768AA721124BAF00587383 /* Player View */,
+				80768AA921124BE500587383 /* Video Player */,
+				80768AA821124BC900587383 /* ViewControllers */,
 				8024F62B210B85FD007C2031 /* Assets.xcassets */,
 				8024F62D210B85FD007C2031 /* LaunchScreen.storyboard */,
-				8024F630210B85FD007C2031 /* Info.plist */,
-				8024C2DC210CB69000B20C6A /* PlayerView.swift */,
-				8024C2DE210CB6A800B20C6A /* PlayerView.xib */,
-				8024C2E0210CB86600B20C6A /* HorizontalScrollViewController.swift */,
 			);
 			path = "REDspace Challenge";
+			sourceTree = "<group>";
+		};
+		80768AA721124BAF00587383 /* Player View */ = {
+			isa = PBXGroup;
+			children = (
+				8024C2DC210CB69000B20C6A /* PlayerView.swift */,
+				8024C2DE210CB6A800B20C6A /* PlayerView.xib */,
+			);
+			path = "Player View";
+			sourceTree = "<group>";
+		};
+		80768AA821124BC900587383 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8024C2E0210CB86600B20C6A /* HorizontalScrollViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		80768AA921124BE500587383 /* Video Player */ = {
+			isa = PBXGroup;
+			children = (
+				80768AAA21124C8200587383 /* VideoLoader.swift */,
+				80768AA521124B8D00587383 /* VideoPlayer.swift */,
+			);
+			path = "Video Player";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8024C2DD210CB69000B20C6A /* PlayerView.swift in Sources */,
+				80768AA621124B8D00587383 /* VideoPlayer.swift in Sources */,
 				8024F625210B85FA007C2031 /* AppDelegate.swift in Sources */,
+				80768AAB21124C8200587383 /* VideoLoader.swift in Sources */,
 				8024C2E1210CB86600B20C6A /* HorizontalScrollViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

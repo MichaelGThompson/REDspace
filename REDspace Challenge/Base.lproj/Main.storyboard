@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-Mb-bWe">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-Mb-bWe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="riu-zW-rFW">
+                                        <rect key="frame" x="169" y="325" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -27,17 +33,21 @@
                             <constraint firstItem="T9w-gn-PNB" firstAttribute="trailing" secondItem="Y7d-Mb-bWe" secondAttribute="trailing" id="0Jf-yR-oew"/>
                             <constraint firstItem="Y7d-Mb-bWe" firstAttribute="leading" secondItem="T9w-gn-PNB" secondAttribute="leading" id="8aa-ge-Ov4"/>
                             <constraint firstItem="Y7d-Mb-bWe" firstAttribute="top" secondItem="lpj-wY-JPY" secondAttribute="top" id="PKG-7g-oNZ"/>
+                            <constraint firstItem="riu-zW-rFW" firstAttribute="centerX" secondItem="T9w-gn-PNB" secondAttribute="centerX" id="gN9-4y-XEw"/>
                             <constraint firstItem="T9w-gn-PNB" firstAttribute="bottom" secondItem="Y7d-Mb-bWe" secondAttribute="bottom" id="pgq-Sa-d9o"/>
+                            <constraint firstItem="riu-zW-rFW" firstAttribute="centerY" secondItem="T9w-gn-PNB" secondAttribute="centerY" id="rH7-9Z-GXo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T9w-gn-PNB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aEU-ha-eJe"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="riu-zW-rFW" id="UHH-aE-Noc"/>
                         <outlet property="scrollView" destination="Y7d-Mb-bWe" id="Yry-vG-2Ga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1P-Y5-zJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="828.03598200899557"/>
+            <point key="canvasLocation" x="1076" y="828.03598200899557"/>
         </scene>
     </scenes>
 </document>
