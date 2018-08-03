@@ -8,11 +8,21 @@
 
 import AVKit
 
-class VideoPlayer: NSObject {
+protocol Player {
+    var playerLayer: AVPlayerLayer? { get }
+    var playerView: PlayerView { get }
+    
+    func play()
+    func playFromBeginning()
+    func pause()
+}
+
+class VideoPlayer: NSObject, Player {
+    
+    var playerLayer: AVPlayerLayer?
     var asset: AVAsset!
     var playerItem: AVPlayerItem?
     var player: AVPlayer?
-    var playerLayer: AVPlayerLayer?
     var playerItemContext = 0
     var playerView: PlayerView
     
@@ -50,7 +60,7 @@ class VideoPlayer: NSObject {
         player?.playImmediately(atRate: 1)
     }
     
-    func playFromStart() {
+    func playFromBeginning() {
         let time = CMTime(value: 0, timescale: 1)
         
         player?.seek(to: time)

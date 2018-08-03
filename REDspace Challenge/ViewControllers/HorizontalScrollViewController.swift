@@ -16,7 +16,7 @@ class HorizontalScrollViewController: UIViewController {
     
     let videoLoader: VideoLoader = VideoLoader()
     var assets: [AVAsset] = []
-    var players: [VideoPlayer] = []
+    var players: [Player] = []
     var currentPlayerIndex = 0
     
     override func viewDidLoad() {
@@ -30,10 +30,11 @@ class HorizontalScrollViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     // MARK: - setup methods
     
     func preLoadAssets() {
-        videoLoader.preLoadAssets { (data) in
+        videoLoader.loadAssets { (data) in
             self.activityIndicator.stopAnimating()
             if data.count > 0 {
                 self.assets = data
@@ -45,6 +46,7 @@ class HorizontalScrollViewController: UIViewController {
                 if let playerLayer = firstPlayer.playerLayer {
                     self.view.layer.addSublayer(playerLayer)
                     playerLayer.frame = self.view.frame
+                    self.navigationItem.title = "Video Feed 1"
                     firstPlayer.play()
                 }
             }
@@ -80,18 +82,21 @@ class HorizontalScrollViewController: UIViewController {
 extension HorizontalScrollViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-      
+        
         let pageIndex = Int(round(scrollView.contentOffset.x / view.frame.width))
         if pageIndex != currentPlayerIndex {
             players[currentPlayerIndex].pause()
             if let currentPlayerLayer = players[currentPlayerIndex].playerLayer, let pageIndexPlayerLayer = players[pageIndex].playerLayer {
                 view.layer.replaceSublayer(currentPlayerLayer, with: pageIndexPlayerLayer)
                 pageIndexPlayerLayer.frame = view.frame
-                players[pageIndex].play()
+//                players[pageIndex].play()
+                navigationItem.title = "Video Feed \(pageIndex + 1)"
+                players[pageIndex].playFromBeginning()
             }
             currentPlayerIndex = pageIndex
         }
     }
+    
 }
 
 

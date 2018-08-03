@@ -13,9 +13,11 @@ class VideoLoader {
 
     let videoSourceUrls = ["https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
                         "https://cp112360-f.akamaihd.net/i/mtvnorigin/gsp.asmstor/asm/2018/07/18/NHD240349-02/NHD240349-02_,384x216_400_m30,512x288_750_m30,640x360_1200_m30,768x432_1700_m30,960x540_2200_m31,1280x720_3500_h32,.mp4.csmil/master.m3u8?__a__=off&__b__=500&__s__=on",
+                        "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+                        "https://cp112360-f.akamaihd.net/i/mtvnorigin/gsp.asmstor/asm/2018/07/18/NHD240349-02/NHD240349-02_,384x216_400_m30,512x288_750_m30,640x360_1200_m30,768x432_1700_m30,960x540_2200_m31,1280x720_3500_h32,.mp4.csmil/master.m3u8?__a__=off&__b__=500&__s__=on",
                         "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"]
     
-    func preLoadAssets(completion: @escaping ([AVAsset])->()) {
+    func loadAssets(completion: @escaping ([AVAsset])->()) {
         
         var results: [AVAsset] = []
         let dispatchGroup = DispatchGroup()
@@ -26,10 +28,10 @@ class VideoLoader {
             
             let asset = AVAsset(url: url)
             let playableKey = "playable"
-            let metaKey = "availableMetadataFormats"
+            //let metaKey = "availableMetadataFormats"
             
             dispatchGroup.enter()
-            asset.loadValuesAsynchronously(forKeys: [playableKey, metaKey]) {
+            asset.loadValuesAsynchronously(forKeys: [playableKey]) {
                 var error: NSError? = nil
                 let status = asset.statusOfValue(forKey: playableKey, error: &error)
                 switch status {
@@ -40,13 +42,10 @@ class VideoLoader {
                     }
                     
                 case .failed:
-                    //print("--- failed to load")
                     self.handleAssetLoadingProblem()
                 case .cancelled:
-                    //print("--- cancelled loading asset")
                     self.handleAssetLoadingProblem()
                 default:
-                    //print("--- Handle all other cases")
                     self.handleAssetLoadingProblem()
                 }
                 dispatchGroup.leave()
