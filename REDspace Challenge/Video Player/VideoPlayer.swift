@@ -12,6 +12,7 @@ protocol Player {
     var playerLayer: AVPlayerLayer? { get }
     var playerView: PlayerView { get }
     
+    func setPlayerViewTitle(title: String)
     func play()
     func playFromBeginning()
     func pause()
@@ -73,6 +74,9 @@ class VideoPlayer: NSObject, Player {
         //}
     }
     
+    func setPlayerViewTitle(title: String) {
+        playerView.titleLabel.text = title
+    }
     
     // MARK: - Observer callback
     override func observeValue(forKeyPath keyPath: String?,

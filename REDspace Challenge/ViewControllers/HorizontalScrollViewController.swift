@@ -46,7 +46,7 @@ class HorizontalScrollViewController: UIViewController {
                 if let playerLayer = firstPlayer.playerLayer {
                     self.view.layer.addSublayer(playerLayer)
                     playerLayer.frame = self.view.frame
-                    firstPlayer.playerView.titleLabel.text = "Video Feed 1"
+                    firstPlayer.setPlayerViewTitle(title: "Video Feed 1")
                     firstPlayer.play()
                 }
             }
@@ -89,7 +89,7 @@ extension HorizontalScrollViewController: UIScrollViewDelegate {
             if let currentPlayerLayer = players[currentPlayerIndex].playerLayer, let pageIndexPlayerLayer = players[pageIndex].playerLayer {
                 view.layer.replaceSublayer(currentPlayerLayer, with: pageIndexPlayerLayer)
                 pageIndexPlayerLayer.frame = view.frame
-                players[pageIndex].playerView.titleLabel.text = "Video Feed \(pageIndex + 1)"
+                players[pageIndex].setPlayerViewTitle(title: "Video Feed \(pageIndex + 1)")
                 players[pageIndex].playFromBeginning()
             }
             currentPlayerIndex = pageIndex
